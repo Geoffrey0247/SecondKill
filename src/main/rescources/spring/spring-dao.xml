@@ -33,8 +33,8 @@
             <property name="dataSource" ref = "dataSource" />
             <!-- 配置Mybatis的全局配置文件:mybatis-config.xml -->
             <property name="configLocation" value="classpath:mybatis-config.xml"/>
-            <!-- 扫描entity包，使用别名org.secondkill.entity.Seckill -->
-            <property name="typeAliasesPackage" value="org.seckill.entity"/>
+            <!-- 扫描entity包，使用别名org.secondkill.entity.Secondkill -->
+            <property name="typeAliasesPackage" value="org.secondkill.entity"/>
             <!-- 扫描sql配置文件:Mapper需要的xml文件 -->
             <property name="mapperLocations" value="classpath:mapper/*.xml"/>
         </bean>
@@ -44,10 +44,10 @@
             <!-- 注入sqlSessionFactory ,防止提前初始化sqlSessionFactory,所以用sqlSessionFactoryBeanName-->
             <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
             <!-- 给出需要扫描Dao接口的包 -->
-            <property name="basePackage" value="org.seckill.dao"/>
+            <property name="basePackage" value="org.secondkill.dao"/>
         </bean>
         <!--&lt;!&ndash;RedisDao构造注入&ndash;&gt;-->
-        <!--<bean id="redisDao" class="org.seckill.dao.RedisDao">-->
+        <!--<bean id="redisDao" class="org.secondkill.dao.RedisDao">-->
             <!--<constructor-arg index="0" value="localhost"/>-->
             <!--<constructor-arg index="1" value="6379"/>-->
         <!--</bean>-->
